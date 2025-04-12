@@ -1,11 +1,94 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Header />
+  <div class="h-screen flex items-center justify-center flex-col gap-2 ">
+    <div class="landing-page flex items-center justify-center flex-col gap-2">
+      <h1 class="title">
+        <p
+          class="flex justify-center text-6xl font-semibold text-neutral-800 dark:text-neutral-200 max-w-2xl"
+        >
+          <span>Controla</span>
+          <span>&nbsp;</span>
+          <span>tus</span>
+          <span>&nbsp;</span>
+          <span>facturas</span>
+        </p>
+        <p
+          class="flex justify-center text-6xl font-semibold max-w-2xl leading-[74px]"
+        >
+          <span
+            class="bg-gradient-to-t from-teal-600 to-green-500 text-transparent bg-clip-text"
+            >Simplifica</span
+          >
+          <span
+            class="bg-gradient-to-t from-teal-600 to-green-500 text-transparent bg-clip-text"
+            >&nbsp;</span
+          >
+          <span
+            class="bg-gradient-to-t from-teal-600 to-green-500 text-transparent bg-clip-text"
+            >tu</span
+          >
+          <span
+            class="bg-gradient-to-t from-teal-600 to-green-500 text-transparent bg-clip-text"
+            >&nbsp;</span
+          >
+          <span
+            class="bg-gradient-to-t from-teal-600 to-green-500 text-transparent bg-clip-text"
+            >gestión</span
+          >
+        </p>
+      </h1>
+      <p
+        class="subtitle pt-4 text-md text-center text-neutral-400 font-medium max-w-md"
+      >
+        Optimiza el control de tus comprobantes fiscales de forma rápida, segura
+        y sin complicaciones.
+      </p>
+    </div>
+    <div></div>
+  </div>
+  <div class="h-screen"></div>
+  <div
+    class="fixed inset-0 pointer-events-none bg-repeat [background-size:128px] opacity-5 z-50"
+    style="background-image: url(https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png)"
+  >
+  </div>
 </Layout>
+
+<script>
+  import { animate, onScroll, utils } from "animejs";
+
+  animate(".title span", {
+    y: [50, 0],
+    opacity: [0, 1],
+    delay: (_, i) => i * 50,
+    ease: "outExpo",
+  });
+
+  animate(".subtitle", {
+    y: [20, 0],
+    opacity: [0, 1],
+    delay: 450,
+    ease: "outExpo",
+  });
+
+  utils.$(".landing-page").forEach(($square) => {
+    animate($square, {
+      y: "6rem",
+      opacity: 0,
+      ease: "linear",
+      alternate: true,
+      // ease: 'inOutQuad',
+      autoplay: onScroll({
+        container: "body",
+        sync: 1,
+        enter: "max bottom",
+        leave: "min top",
+      }),
+    });
+  });
+</script>
