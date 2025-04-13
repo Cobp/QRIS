@@ -1,0 +1,133 @@
+<section class="w-full h-full flex items-center justify-center snap-start">
+  <div class="w-full max-w-6xl px-5 flex flex-col items-center gap-8">
+    <!-- Toggle Button -->
+    <div class="flex items-center gap-4 mb-6">
+      <span class="text-sm font-medium text-neutral-600">Mensual</span>
+      <button
+        class="relative w-12 h-6 bg-gray-300 rounded-full focus:outline-none"
+      >
+        <span
+          class={`absolute w-5 h-5 bg-white rounded-full transition-transform `}
+        ></span>
+      </button>
+      <span class="text-sm font-medium text-neutral-600">Anual</span>
+    </div>
+
+    <div class="w-full flex items-center gap-8">
+      <!-- Plan Gratis -->
+      <div class="w-full h-[500px] p-6 rounded-2xl">
+        <h3 class="text-neutral-500 text-sm font-semibold mb-4">Gratis</h3>
+        <p class="text-neutral-800">
+          <span class="text-5xl font-semibold">$0</span>
+          <span class="font-bold text-sm">/siempre</span>
+        </p>
+        <p class="text-sm text-neutral-600 font-semibold mt-2">
+          Optimiza tu tiempo y simplifica tu gestión con nuestro plan gratuito.
+        </p>
+        <button
+          class="h-9 w-full bg-neutral-600 rounded-lg my-4 text-sm font-semibold text-neutral-200 hover:bg-neutral-500 transition-all duration-200 cursor-pointer active:scale-[0.98]"
+        >
+          Iniciar Sesión
+        </button>
+        <div class="bg-zinc-300 px-4 py-3 mt-2 rounded-xl">
+          <p class="text-sm text-neutral-600 font-semibold">
+            El plan gratuito incluye
+          </p>
+          <ul class="mt-2 pl-4 list-disc text-neutral-600 text-sm">
+            <li>Acceso limitado de 15 usos del escáner QR por dia</li>
+            <li>Hasta 3 proyectos</li>
+            <li>Personalización y soporte básico</li>
+            <li>Conección de 1 dispositivo para el escáner</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Plan Profesional -->
+      <div
+        class="relative w-full bg-gradient-to-t from-emerald-400 to-emerald-800 border-2 border-emerald-400 p-6 rounded-2xl shadow-[0_12px_32px_#5ee9b5] flex flex-col"
+      >
+        <h3 class="text-neutral-300 text-sm font-medium mb-4">Profesional</h3>
+        <span
+          class="absolute top-4 right-4 pl-2 pr-3 py-1 bg-amber-400 text-emerald-800 font-bold rounded-lg text-sm flex items-center gap-1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            ><path
+              fill="currentColor"
+              d="M12.832 21.801c3.126-.626 7.168-2.875 7.168-8.69c0-5.291-3.873-8.815-6.658-10.434c-.619-.36-1.342.113-1.342.828v1.828c0 1.442-.606 4.074-2.29 5.169c-.86.559-1.79-.278-1.894-1.298l-.086-.838c-.1-.974-1.092-1.565-1.87-.971C4.461 8.46 3 10.33 3 13.11C3 20.221 8.289 22 10.933 22q.232 0 .484-.015c.446-.056 0 .099 1.415-.185"
+              opacity="0.5"></path><path
+              fill="currentColor"
+              d="M8 18.444c0 2.62 2.111 3.43 3.417 3.542c.446-.056 0 .099 1.415-.185C13.871 21.434 15 20.492 15 18.444c0-1.297-.819-2.098-1.46-2.473c-.196-.115-.424.03-.441.256c-.056.718-.746 1.29-1.215.744c-.415-.482-.59-1.187-.59-1.638v-.59c0-.354-.357-.59-.663-.408C9.495 15.008 8 16.395 8 18.445"
+            ></path></svg
+          >
+          Popular
+        </span>
+        <p class="text-white">
+          <span class="text-5xl font-semibold">$9</span>
+          <span class="font-semibold text-sm">.99 /mes</span>
+        </p>
+        <p class="text-neutral-300 text-sm font-semibold mt-2">
+          Accede a funciones avanzadas y mejora tu productividad
+        </p>
+        <button
+          class="h-9 w-full bg-neutral-200 rounded-lg my-4 text-sm font-semibold text-neutral-800 hover:bg-neutral-300 transition-all duration-200 cursor-pointer active:scale-[0.98]"
+        >
+          Obtener plan
+        </button>
+        <div class="grow bg-neutral-200 px-4 py-3 mt-2 rounded-xl">
+          <p class="text-sm text-neutral-700 font-semibold">
+            El plan profesional incluye
+          </p>
+          <ul class="mt-2 pl-4 list-disc text-neutral-600 text-sm">
+            <li>Acceso ilimitado del escáner QR</li>
+            <li>Proyectos ilimitados</li>
+            <li>Acceso a funciones avanzadas</li>
+            <li>Personalización y soporte avanzado</li>
+            <li>Conección de otros dispositivos para el escáner</li>
+            <li>Acceso a informes detallados</li>
+            <li>Oportunidades para probar nuevas funciones</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Plan Empresarial -->
+      <div class="w-full h-[500px] p-6 rounded-2xl">
+        <h3 class="text-neutral-500 text-sm font-semibold mb-4">Empresarial</h3>
+        <p class="text-neutral-800">
+          <span class="text-5xl font-semibold">$49</span>
+          <span class="font-semibold text-sm">.99 /mes</span>
+        </p>
+        <p class="text-neutral-600 font-semibold text-sm mt-2">
+          Potencia tu gestión empresarial con nuestro plan premium.
+        </p>
+        <button
+          class="h-9 w-full bg-neutral-600 rounded-lg my-4 text-sm font-semibold text-neutral-200 hover:bg-neutral-500 transition-all duration-200 cursor-pointer active:scale-[0.98]"
+        >
+          Obtener plan
+        </button>
+        <div class="bg-zinc-300 px-4 py-3 mt-2 rounded-xl">
+          <p class="text-sm text-neutral-600 font-semibold">
+            El plan empresarial incluye
+          </p>
+          <ul class="mt-2 pl-4 list-disc text-neutral-600 text-sm">
+            <li>Todo lo que está incluido en la versión Profesional</li>
+            <li>Protección de datos con cifrado</li>
+            <li>
+              Gestiona de forma centralizada a los miembros, el acceso y la
+              facturación
+            </li>
+            <li>Accede y colabora en proyectos compartidos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+    li {
+        padding: 0.25rem 0;
+    }
+</style>
