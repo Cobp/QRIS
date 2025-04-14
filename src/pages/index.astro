@@ -6,8 +6,10 @@ import Pricing from "../components/Pricing.astro";
 ---
 
 <Layout>
-  <Header />
-  <Hero />
+  <div class="h-screen flex flex-col">
+    <Header />
+    <Hero />
+  </div>
   <Pricing />
   <div
     class="fixed inset-0 pointer-events-none bg-repeat [background-size:128px] opacity-5 z-50"
