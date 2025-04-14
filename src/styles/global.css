@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
 /* @theme {
-    --color-theme-emerald: #10B981;
+    --mask-position-y: linear-gradient(0deg, transparent, white 20%, white 80%, transparent);
+    --mask-position-x: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 } */
