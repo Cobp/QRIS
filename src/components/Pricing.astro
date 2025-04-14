@@ -1,21 +1,44 @@
-<section class="w-full h-full flex items-center justify-center snap-start">
+<section class="w-full h-full flex items-center justify-center">
   <div class="w-full max-w-6xl px-5 flex flex-col items-center gap-8">
     <!-- Toggle Button -->
-    <div class="flex items-center gap-4 mb-6">
-      <span class="text-sm font-medium text-neutral-600">Mensual</span>
-      <button
-        class="relative w-12 h-6 bg-gray-300 rounded-full focus:outline-none"
+    <div
+      class="relative flex items-center mb-6 bg-zinc-300 p-1 rounded-xl select-none"
+    >
+      <input
+        id="billingPeriod1"
+        type="radio"
+        name="billingPeriod"
+        value="mensual"
+        checked
+        class="peer/mensual hidden"
+      />
+      <label
+        for="billingPeriod1"
+        class="peer-checked/mensual:text-neutral-200 text-neutral-600 text-sm h-8 w-20 flex items-center justify-center z-10 cursor-pointer transition-all duration-300"
       >
-        <span
-          class={`absolute w-5 h-5 bg-white rounded-full transition-transform `}
-        ></span>
-      </button>
-      <span class="text-sm font-medium text-neutral-600">Anual</span>
+        Mensual
+      </label>
+      <input
+        id="billingPeriod2"
+        type="radio"
+        name="billingPeriod"
+        value="anual"
+        class="peer/anual hidden"
+      />
+      <label
+        for="billingPeriod2"
+        class="peer-checked/anual:text-neutral-200 text-neutral-600 text-sm h-8 w-20 flex items-center justify-center z-10 cursor-pointer transition-all duration-300"
+      >
+        Anual
+      </label>
+      <span
+        class="absolute w-20 h-8 bg-neutral-600 left-1 top-1 rounded-lg peer-checked/anual:translate-x-full transition-all duration-300"
+      ></span>
     </div>
 
     <div class="w-full flex items-center gap-8">
       <!-- Plan Gratis -->
-      <div class="w-full h-[500px] p-6 rounded-2xl">
+      <div class="w-full h-[470px] p-6 rounded-2xl">
         <h3 class="text-neutral-500 text-sm font-semibold mb-4">Gratis</h3>
         <p class="text-neutral-800">
           <span class="text-5xl font-semibold">$0</span>
@@ -33,18 +56,80 @@
           <p class="text-sm text-neutral-600 font-semibold">
             El plan gratuito incluye
           </p>
-          <ul class="mt-2 pl-4 list-disc text-neutral-600 text-sm">
-            <li>Acceso limitado de 15 usos del escáner QR por dia</li>
-            <li>Hasta 3 proyectos</li>
-            <li>Personalización y soporte básico</li>
-            <li>Conección de 1 dispositivo para el escáner</li>
+          <ul class="mt-2 text-neutral-600 text-sm">
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-neutral-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium">Hasta 3 proyectos</span>
+            </li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-neutral-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Acceso limitado de 15 usos del escáner QR por dia</span
+              >
+            </li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-neutral-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Conección de 1 dispositivo para el escáner</span
+              >
+            </li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-neutral-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Personalización y soporte básico</span
+              >
+            </li>
           </ul>
         </div>
       </div>
 
       <!-- Plan Profesional -->
       <div
-        class="relative w-full bg-gradient-to-t from-emerald-400 to-emerald-800 border-2 border-emerald-400 p-6 rounded-2xl shadow-[0_12px_32px_#5ee9b5] flex flex-col"
+        class="relative w-full bg-gradient-to-t from-emerald-500 to-emerald-800 border-2 border-emerald-500 p-6 rounded-2xl flex flex-col"
       >
         <h3 class="text-neutral-300 text-sm font-medium mb-4">Profesional</h3>
         <span
@@ -65,46 +150,269 @@
           >
           Popular
         </span>
-        <p class="text-white">
-          <span class="text-5xl font-semibold">$9</span>
-          <span class="font-semibold text-sm">.99 /mes</span>
-        </p>
+        <div class="flex items-end text-white gap-1">
+          <div class="flex text-5xl font-semibold">
+            $
+            <p
+              class="count count-9 flex flex-col h-12 overflow-hidden [mask-image:linear-gradient(0deg,transparent,white_15%,white_85%,transparent)]"
+            >
+              <span>0</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>0</span>
+            </p>
+          </div>
+          <div class="flex font-semibold text-sm pb-1">
+            .
+            <p
+              class="count count-9 flex flex-col h-4 overflow-hidden [mask-image:linear-gradient(0deg,transparent,white_10%,white_90%,transparent)]"
+            >
+              <span>0</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>0</span>
+            </p>
+            <p
+              class="count count-9 flex flex-col h-4 overflow-hidden [mask-image:linear-gradient(0deg,transparent,white_15%,white_85%,transparent)]"
+            >
+              <span>0</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>0</span>
+            </p>
+            /mes
+          </div>
+        </div>
         <p class="text-neutral-300 text-sm font-semibold mt-2">
           Accede a funciones avanzadas y mejora tu productividad
         </p>
         <button
           class="h-9 w-full bg-neutral-200 rounded-lg my-4 text-sm font-semibold text-neutral-800 hover:bg-neutral-300 transition-all duration-200 cursor-pointer active:scale-[0.98]"
         >
-          Obtener plan
+          Obtener Plan
         </button>
         <div class="grow bg-neutral-200 px-4 py-3 mt-2 rounded-xl">
           <p class="text-sm text-neutral-700 font-semibold">
             El plan profesional incluye
           </p>
-          <ul class="mt-2 pl-4 list-disc text-neutral-600 text-sm">
-            <li>Acceso ilimitado del escáner QR</li>
-            <li>Proyectos ilimitados</li>
-            <li>Acceso a funciones avanzadas</li>
-            <li>Personalización y soporte avanzado</li>
-            <li>Conección de otros dispositivos para el escáner</li>
-            <li>Acceso a informes detallados</li>
-            <li>Oportunidades para probar nuevas funciones</li>
+          <ul class="mt-2 text-neutral-600 text-sm">
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-emerald-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium">Proyectos ilimitados</span>
+            </li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-emerald-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Acceso ilimitado del escáner QR</span
+              >
+            </li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-emerald-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Conección de varios dispositivos para el escáner</span
+              >
+            </li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-emerald-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Personalización y soporte avanzado</span
+              >
+            </li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-emerald-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Acceso a funciones avanzadas e informes detallados</span
+              >
+            </li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-emerald-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Oportunidades para probar nuevas funciones</span
+              >
+            </li>
           </ul>
         </div>
       </div>
 
       <!-- Plan Empresarial -->
-      <div class="w-full h-[500px] p-6 rounded-2xl">
-        <h3 class="text-neutral-500 text-sm font-semibold mb-4">Empresarial</h3>
-        <p class="text-neutral-800">
-          <span class="text-5xl font-semibold">$49</span>
-          <span class="font-semibold text-sm">.99 /mes</span>
-        </p>
+      <div class="w-full h-[470px] p-6 rounded-2xl">
+        <h3 class="text-emerald-500 text-sm font-semibold mb-4">Empresarial</h3>
+        <div class="flex items-end text-neutral-800 gap-1">
+          <div class="flex text-5xl font-semibold">
+            $
+            <p
+              class="count count-4 flex flex-col h-12 overflow-hidden [mask-image:linear-gradient(0deg,transparent,white_15%,white_85%,transparent)]"
+            >
+              <span>0</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>0</span>
+            </p>
+            <p
+              class="count count-9 flex flex-col h-12 overflow-hidden [mask-image:linear-gradient(0deg,transparent,white_15%,white_85%,transparent)]"
+            >
+              <span>0</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>0</span>
+            </p>
+            <!-- <p
+              class="count count-9 flex flex-col h-12 overflow-hidden [mask-image:linear-gradient(0deg,transparent,white_15%,white_85%,transparent)]"
+            >
+              <span>0</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>0</span>
+            </p> -->
+          </div>
+          <div class="flex font-semibold text-sm pb-1">
+            .
+            <p
+              class="count count-9 flex flex-col h-4 overflow-hidden [mask-image:linear-gradient(0deg,transparent,white_10%,white_90%,transparent)]"
+            >
+              <span>0</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>0</span>
+            </p>
+            <p
+              class="count count-9 flex flex-col h-4 overflow-hidden [mask-image:linear-gradient(0deg,transparent,white_15%,white_85%,transparent)]"
+            >
+              <span>0</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>0</span>
+            </p>
+            /mes
+          </div>
+        </div>
         <p class="text-neutral-600 font-semibold text-sm mt-2">
           Potencia tu gestión empresarial con nuestro plan premium.
         </p>
         <button
-          class="h-9 w-full bg-neutral-600 rounded-lg my-4 text-sm font-semibold text-neutral-200 hover:bg-neutral-500 transition-all duration-200 cursor-pointer active:scale-[0.98]"
+          class="h-9 w-full bg-gradient-to-t from-emerald-700 to-emerald-400 rounded-lg my-4 text-sm font-semibold text-neutral-200 hover:bg-neutral-500 transition-all duration-200 cursor-pointer active:scale-[0.98]"
         >
           Obtener plan
         </button>
@@ -112,22 +420,125 @@
           <p class="text-sm text-neutral-600 font-semibold">
             El plan empresarial incluye
           </p>
-          <ul class="mt-2 pl-4 list-disc text-neutral-600 text-sm">
-            <li>Todo lo que está incluido en la versión Profesional</li>
-            <li>Protección de datos con cifrado</li>
-            <li>
-              Gestiona de forma centralizada a los miembros, el acceso y la
-              facturación
+          <ul class="mt-2 text-neutral-600 text-sm">
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-emerald-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Todo lo que está incluido en la versión Profesional</span
+              >
             </li>
-            <li>Accede y colabora en proyectos compartidos</li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-emerald-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Protección de datos con cifrado</span
+              >
+            </li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-emerald-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Gestiona de forma centralizada a los miembros, el acceso y la
+                facturación</span
+              >
+            </li>
+            <li class="flex gap-1.5 mb-1.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 min-w-4 mt-[1px] text-emerald-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  fill="currentColor"
+                  d="M9.84 17.08a1 1 0 0 1-.707-.293l-3.84-3.84a1 1 0 1 1 1.414-1.414l3.133 3.133l7.453-7.453a1 1 0 0 1 1.414 1.414l-8.16 8.16a1 1 0 0 1-.707.293"
+                ></path>
+              </svg>
+              <span class="text-sm font-medium"
+                >Accede y colabora en proyectos compartidos</span
+              >
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- <script>
+  import plans from "../content/pricing.json";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButtons = document.querySelectorAll('input[name="billingPeriod"]');
+    const priceElements = document.querySelectorAll(".plan-price");
+    const periodElements = document.querySelectorAll(".billing-period");
+
+    toggleButtons.forEach((button) => {
+      button.addEventListener("change", (event) => {
+        const selectedPeriod = (event.target as HTMLInputElement).value;
+
+        plans.forEach((plan, index) => {
+          if (plan.price) {
+            priceElements[index].textContent = plan.price[selectedPeriod as "mensual" | "anual"];
+          periodElements[index].textContent = selectedPeriod === "mensual" ? "mes" : "año";
+          }
+        });
+      });
+    });
+  });
+
+</script> -->
+
+<script>
+  import { animate } from "animejs";
+
+  animate(".count-4 span", {
+    translateY: ["0%", "-400%"],
+    duration: 1000,
+  });
+
+  animate(".count-9 span", {
+    y: "-900%",
+    ease: "outExpo",
+    duration: 1000,
+    delay: (el, i) => i * 10,
+  });
+</script>
+
 <style>
-    li {
-        padding: 0.25rem 0;
-    }
+  .count span {
+    text-align: center;
+  }
 </style>
